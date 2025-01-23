@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="3D edit with precise shape control">
+  <meta property="og:title" content="3D edit base on GaussianSplatting"/>
+  <meta property="og:description" content="3D edit"/>
+  <meta property="og:url" content="https://shuoyueli4519.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/page.png" />
+  <meta property="og:image:width" content="512"/>
+  <meta property="og:image:height" content="512"/>
+
+
+  <meta name="twitter:title" content="3D edit base on GaussianSplatting">
+  <meta name="twitter:description" content="3D edit">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/page.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="3DEidt, GaussianSplatting, MVDiffusion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SVG-Eidtor: Single View Guide 3D Gaussian Edit with precise shape control</title>
+  <link rel="icon" type="image/x-icon" href="static/images/page.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/word.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SVG-Eidtor: Single View Guide 3D Gaussian Edit with precise shape control</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/shuoyueli4519" target="_blank">Yang Zheng</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Nan Chen</a><sup>1</sup>,</span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>University of Science and Technology of China<br></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/example.png" alt="Example Image" style="width:100%; margin-top:20px;">
+        <div class="has-text-centered-example">
+        In this work, we introduce SVG-Editor, a novel pipeline designed specifically for 3D Gaussian Splatting editing. It leverages any edited view as a control condition to perform accurate region editing on the original object.
+        </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-1">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We achieve the local editing of object representations, which is based on 3D Gaussian Splatting. We have achieved precise region control editing, preserving the detailed features of the original object. The followings are 360-degree videos of 3D objects at an elevation of 0.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/pipeline.png" alt="Example Image" style="width:100%; margin-top:20px;">
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-1">Result</h2>
+        <div class="content has-text-justified">
+          <p>
+            All experiments were performed under 3D Gaussian Splatting representation. In the experiment, we achieve the addition, deletion and modification of objects. The followings are 360-degree videos of 3D objects at an elevation of 0. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class = "video-container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/girl.mp4" loop autoplay class="no-controls">
+            </video>
+            <video src="static/videos/girl_red_dress.mp4" loop autoplay class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A girl wearing a <span class="blue-text">red dress</span>.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/girl.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/girl_goggles.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A little girl wearing a <span class="blue-text">goggles</span>.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/girl.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/girl_blue_shoes.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A little girl wearing a pair of <span class="blue-text">blue shoes</span>.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class = "video-container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/rccar.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/cat_rccar.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A rccar with a <span class="blue-text"><del>chicken</del> cat head</span>.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/rccar.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/pig_rccar.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A rccar with a <span class="blue-text"><del>pig</del> cat head</span>.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class = "video-container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/box.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/hammer_like_tail.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A toy with a <span class="blue-text">hammer like tail</span>.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/box.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/box_rabbit_ears.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A toy with <span class="blue-text">rabbit like ears</span>.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class = "video-container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/head.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/head_pepper_mustache.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A head with <span class="blue-text">pepper like mustache</span>.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/head.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/head_cowboy_hat.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A head wearing a <span class="blue-text">cowboy hat</span>.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class = "video-container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/mechine.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/mechine_pizza.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A mechine holds <span class="blue-text"><del>OREO</del> a pizza</span>.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/mechine.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/mechine_barrel.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A head wearing a <span class="blue-text"><del>cup</del> barrel</span>.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class = "video-container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/knight.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/knight_mask.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A knight wearing a <span class="blue-text">mask</span>.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- Your image here -->
+            <video src="static/videos/knight.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <video src="static/videos/knight.mp4" loop autoplay muted preload="auto" class="no-controls">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              A knight holds a <span class="blue-text">colorful shield</span>.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <!-- <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
