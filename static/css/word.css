@@ -3,7 +3,7 @@
 }
 
 .video-container {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -28,4 +28,14 @@
 .has-text-centered-example {
     text-align: center;
     padding: 0px 30px;
+}
+
+.left-div {
+    float: left;
+    width: 50%;
+}
+
+.right-div {
+    float: left;
+    width: 50%;
 }
