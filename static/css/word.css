@@ -3,26 +3,49 @@
 }
 
 .video-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0 15px;
+    width: 60%;
+    padding: 0 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto; /* 居中显示 */
 }
 
 .no-controls {
-    width: 48%; /* 根据需要调整宽度 */
+    width: 50%; /* 根据需要调整宽度 */
+}
+
+.video-item {
+    position: relative;
+    width: 100%; /* 每个视频占据的宽度 */
+    display: flex;
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    height: 100%; /* 视频项高度占满父容器 */
+    padding: 80px 0 60px 0;
 }
 
 .video-text {
     position: absolute;
-    top: 10px; /* 根据需要调整位置 */
-    left: 50%;
-    transform: translateX(-50%);
-    color: red; /* 根据需要调整颜色 */
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-    padding: 5px 10px;
-    border-radius: 5px;
+    width: 100%;
+    bottom: 30px;
     text-align: center;
-    font-size: 10px; /* 根据需要调整字体大小 */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.video-text-four {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 四列，每列占1/4 */
+    width: 100%; /* 容器宽度 */
+    margin: 0 auto; /* 居中显示 */
+    top: 50px;
+}
+
+.video-text-four-item {
+    text-align: center; /* 文字居中对齐 */
+    font-size: 18px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
 }
 
 .has-text-centered-example {

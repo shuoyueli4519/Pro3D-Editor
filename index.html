@@ -161,10 +161,10 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-1">Result</h2>
+        <h2 class="title is-1">Comparison</h2>
         <div class="content has-text-justified">
           <p>
-            All experiments were performed under 3D Gaussian Splatting representation. In the experiment, we achieve the addition, deletion and modification of objects. The followings are 360-degree videos of 3D objects at an elevation of 0. 
+            The following presents a comparison of the results from our method with those of Tailor3D and LGM. Both our method and LGM generate objects represented in 3DGS, while Tailor3D produces objects represented in mesh. Below are 360-degree orbit videos rendered at an elevation of 0.
           </p>
         </div>
       </div>
@@ -175,208 +175,276 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class = "video-container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/girl.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/girl_red_dress.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A girl wearing a <span class="blue-text">red dress</span>.
-            </h2>
-          </div>
+<div class = "video-container">
+  <div id="results-carousel" class="carousel results-carousel">
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
 
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/girl.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/girl_goggles.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A little girl wearing a <span class="blue-text">goggles</span>.
-            </h2>
-          </div>
+      <!-- Your image here -->
+      <video src="static/videos/rccar.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/cat_rccar.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/cat_rccar_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/cat_rccar_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
 
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/girl.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/girl_blue_shoes.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A little girl wearing a pair of <span class="blue-text">blue shoes</span>.
-            </h2>
-          </div>
-        </div>
+      <div class="video-text">
+        A rccar with a <span class="blue-text"><del>chicken</del> cat head</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/rccar.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/pig_rccar.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/pig_rccar_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/pig_rccar_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A rccar with a <span class="blue-text"><del>chicken</del> pig head</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/rccar.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/pig_rccar_hat.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/pig_rccar_hat_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/pig_rccar_hat_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A rccar with a <span class="blue-text"><del>chicken</del> pig head wearing a hat</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/girl.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_red_dress.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_red_dress_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_red_dress_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A little girl wearing a <span class="blue-text">red dress</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/girl.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_blue_shoes.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_blue_shoes_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_blue_shoes_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A little girl wearing a <span class="blue-text">goggles</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/girl.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_goggles.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_goggles_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/girl_goggles_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A little girl wearing a pair of <span class="blue-text">blue shoes</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/box.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/hammer_like_tail.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/hammer_like_tail_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/hammer_like_tail_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A toy with a <span class="blue-text">hammer like tail</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/box.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/box_rabbit_ears.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/box_rabbit_ears_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/box_rabbit_ears_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A toy with <span class="blue-text">rabbit like ears</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/head.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/head_pepper_mustache.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/head_pepper_mustache_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/head_pepper_mustache_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A head with <span class="blue-text">pepper like mustache</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/head.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/head_cowboy_hat.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/head_cowboy_hat_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/head_cowboy_hat_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A head wearing a <span class="blue-text">cowboy hat</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/mechine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/mechine_pizza.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/mechine_pizza_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/mechine_pizza_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A mechine holds <span class="blue-text"><del>OREO</del> a pizza</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/mechine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/mechine_barrel.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/mechine_barrel_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/mechine_barrel_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A head wearing a <span class="blue-text"><del>cup</del> barrel</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/knight.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/knight_mask.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/knight_mask_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/knight_toy_mask_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A knight wearing a <span class="blue-text">mask</span>.
+      </div>
+    </div>
+
+    <div class="video-item">
+      <div class="video-text-four">
+        <div class="video-text-four-item">source object</div>
+        <div class="video-text-four-item">ours</div>
+        <div class="video-text-four-item">tailor3d</div>
+        <div class="video-text-four-item">LGM</div>
+      </div>
+
+      <!-- Your image here -->
+      <video src="static/videos/knight.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/knight_shield.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/knight_shield_tailor3d.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+      <video src="static/videos/knight_toy_shield_3.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
+
+      <div class="video-text">
+        A knight holds a <span class="blue-text">colorful shield</span>.
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class = "video-container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/rccar.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/cat_rccar.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A rccar with a <span class="blue-text"><del>chicken</del> cat head</span>.
-            </h2>
-          </div>
-
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/rccar.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/pig_rccar.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A rccar with a <span class="blue-text"><del>pig</del> cat head</span>.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class = "video-container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/box.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/hammer_like_tail.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A toy with a <span class="blue-text">hammer like tail</span>.
-            </h2>
-          </div>
-
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/box.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/box_rabbit_ears.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A toy with <span class="blue-text">rabbit like ears</span>.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class = "video-container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/head.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/head_pepper_mustache.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A head with <span class="blue-text">pepper like mustache</span>.
-            </h2>
-          </div>
-
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/head.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/head_cowboy_hat.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A head wearing a <span class="blue-text">cowboy hat</span>.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class = "video-container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/mechine.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/mechine_pizza.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A mechine holds <span class="blue-text"><del>OREO</del> a pizza</span>.
-            </h2>
-          </div>
-
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/mechine.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/mechine_barrel.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A head wearing a <span class="blue-text"><del>cup</del> barrel</span>.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class = "video-container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/knight.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/knight_mask.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A knight wearing a <span class="blue-text">mask</span>.
-            </h2>
-          </div>
-
-          <div class="item">
-            <!-- Your image here -->
-            <video src="static/videos/knight.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <video src="static/videos/knight_shield.mp4" loop autoplay muted preload="auto" class="no-controls">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              A knight holds a <span class="blue-text">colorful shield</span>.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- End image carousel -->
 
 
