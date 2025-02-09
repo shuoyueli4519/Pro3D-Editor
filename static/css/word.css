@@ -21,7 +21,7 @@
     align-items: center; /* 水平居中 */
     justify-content: center; /* 垂直居中 */
     height: 100%; /* 视频项高度占满父容器 */
-    padding: 80px 0 60px 0;
+    padding: 80px 0 120px 0;
 }
 
 .video-text {
@@ -36,10 +36,19 @@
 .video-text-four {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 四列，每列占1/4 */
+    grid-template-columns: repeat(3, 1fr); /* 三列，每列占1/3 */
     width: 100%; /* 容器宽度 */
     margin: 0 auto; /* 居中显示 */
     top: 50px;
+}
+
+.video-text-four-buttom {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 三列，每列占1/3 */
+    width: 100%; /* 容器宽度 */
+    margin: 0 auto; /* 居中显示 */
+    bottom: 90px;
 }
 
 .video-text-four-item {
