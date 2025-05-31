@@ -46,33 +46,40 @@
   <script src="static/js/index.js"></script>
 </head>
 <body>
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">SVG-Eidtor: Single View Guide 3D Gaussian Edit with precise shape control</h1>
+            <h1 class="title is-1 publication-title"><i>Pro3D-Editor</i> : A Progressive-Views Perspective for Consistent and Precise 3D Editing</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
+              <!-- <span class="author-block">
                 <a href="https://github.com/shuoyueli4519" target="_blank">Yang Zheng</a><sup>1</sup>,</span>
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Mengqi Huang</a><sup>1</sup>,</span>
                   <span class="author-block">
                     <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Nan Chen</a><sup>1</sup>,</span>
+                    <span class="author-block">
+                      <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Zhendong Mao</a><sup>1</sup>,</span>
+                  </div> -->
+              
+              <span class="author-block">
+                <a target="_blank">Anonymous Authors</a><sup>1</sup></span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
+                  <!-- <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>University of Science and Technology of China<br></span>
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div> -->
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Anonymous Institutions<br></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -80,7 +87,7 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
@@ -94,7 +101,7 @@
                   </span>
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -102,10 +109,10 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -113,9 +120,24 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-1">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-guided 3D editing aims to precisely edit semantically relevant local 3D regions, which has significant potential for various practical applications ranging from 3D games to film production. Existing methods typically follow a view-indiscriminate paradigm: editing 2D views indiscriminately and projecting them back into 3D space. However, they overlook the different cross-view interdependencies, resulting in inconsistent multi-view editing. In this study, we argue that ideal consistent 3D editing can be achieved through a <b>progressive-views paradigm</b>, which propagates editing semantics from the editing-salient view to other editing-sparse views. Specifically, we propose <b>Pro3D-Editor</b>, a novel framework, which mainly includes Primary-view Sampler, Key-view Render, and Full-view Refiner. Primary-view Sampler dynamically samples and edits the most editing-salient view as the primary view. Key-view Render accurately propagates editing semantics from the primary view to other key views through its Mixture-of-View-Experts Low-Rank Adaption (MoVE-LoRA). Full-view Refiner edits and refines the 3D object based on the edited multi-views. Extensive experiments demonstrate that our method outperforms existing methods in editing accuracy and spatial consistency.
+          </p>
         </div>
       </div>
     </div>
@@ -129,21 +151,26 @@
     <div class="hero-body">
       <img src="static/images/example.png" alt="Example Image" style="width:100%; margin-top:20px;">
         <div class="has-text-centered-example">
-        In this work, we introduce SVG-Editor, a novel pipeline designed specifically for 3D Gaussian Splatting editing. It leverages any edited view as a control condition to perform accurate region editing on the original object.
+          We introduce a <b>progressive-views paradigm</b>, a novel 3D editing paradigm that propagates editing semantics from editing-salient views to editing-sparse views, thereby achieving precise, consistent, and high-quality 3D editing.
         </div>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
 
+
+
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-1">Abstract</h2>
+        <h2 class="title is-1">How does it work?</h2>
         <div class="content has-text-justified">
           <p>
-            We achieve the local editing of object representations, which is based on 3D Gaussian Splatting. We have achieved precise region control editing, preserving the detailed features of the original object. The followings are 360-degree videos of 3D objects at an elevation of 0.
+            <b>Pro3D-Editor</b> constructs a hierarchical "primary-view &rarr; key-views &rarr; full-views" editing pipeline based on the dynamic editing salience across different views. Specifically, the <b>Pro3D-Editor</b> consists of three successive modules: 
+(1) <b>Primary-view Sampler</b> module dynamically samples and edits the most editing salient view as the primary view by calculating the salience score between each view and the editing signal, which is further linearly extrapolated with its corresponding negative view to amplify accuracy.
+(2) <b>Key-view Render</b> module takes the edited primary view as the anchor and propagates its editing semantics to other key views. This is achieved through a novel Mixture-of-View-Experts Low-Rank Adaption (MoVE-LoRA), which learns feature correspondences from the primary view to the remaining key views while blocking reverse learning to avoid conflicts.
+(3) <b>Full-view Refiner</b> module repairs numerous newly rendered views to refine the edited 3D result, which is achieved by fusing the editing information from the edited key multi-views.
           </p>
         </div>
       </div>
@@ -166,7 +193,7 @@
         <h2 class="title is-1">Comparison</h2>
         <div class="content has-text-justified">
           <p>
-            The following presents a comparison of the results from our method with those of LGM、Tailor3D、MVEdit and 3DAdapter. Both our method and LGM generate objects are represented in 3DGS, while Tailor3D、MVEdit and 3DAdapter produce objects are represented in mesh. Besides, The results obtained from 3DAdapter and MVEdit are derived using their respective 3D-to-3D functionalities. Below are 360-degree orbit videos rendered at an elevation of 0.
+            We provide extensive visual comparison trajectory videos to demonstrate the improvements of our method over existing methods in terms of editing accuracy and consistency.
           </p>
         </div>
       </div>
@@ -177,377 +204,85 @@
 
 
 <!-- Image carousel -->
-<div class = "video-container">
-  <div id="results-carousel" class="carousel results-carousel">
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/cat_rccar_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A rccar with a <span class="blue-text"><del>chicken</del> cat head</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/pig_rccar_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A rccar with a <span class="blue-text"><del>chicken</del> pig head</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/pig_rccar_hat_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A rccar with a <span class="blue-text"><del>chicken</del> pig head wearing a hat</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/girl_red_dress_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A little girl wearing a <span class="blue-text">red dress</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/girl_goggles_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A little girl wearing a <span class="blue-text">goggles</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/girl_blue_shoes_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A little girl wearing a pair of <span class="blue-text">blue shoes</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/hammer_like_tail_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A toy with a <span class="blue-text">hammer like tail</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/box_rabbit_ears_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A toy with <span class="blue-text">rabbit like ears</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/head_pepper_mustache_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A head with <span class="blue-text">pepper like mustache</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/head_cowboy_hat_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A head wearing a <span class="blue-text">cowboy hat</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/mechine_pizza_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A mechine holds <span class="blue-text"><del>OREO</del> a pizza</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/mechine_barrel_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A mechine holds a <span class="blue-text"><del>cup</del> barrel</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/knight_mask_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A knight wearing a <span class="blue-text">mask</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-
-    <div class="video-item">
-      <div class="video-text-four">
-        <div class="video-text-four-item">source object</div>
-        <div class="video-text-four-item">ours</div>
-        <div class="video-text-four-item">LGM</div>
-      </div>
-
-      <!-- Your image here -->
-      <video src="static/videos/knight_shield_combine.mp4" loop autoplay muted preload="auto" class="no-controls"></video>
-
-      <div class="video-text">
-        A knight holds a <span class="blue-text">colorful shield</span>.
-      </div>
-
-      <div class="video-text-four-buttom">
-        <div class="video-text-four-item">tailor3d</div>
-        <div class="video-text-four-item">MVEdit</div>
-        <div class="video-text-four-item">3DAdapter</div>
-      </div>
-    </div>
-  </div>
+<div class="video-container">
+  <div id="results-carousel" class="carousel results-carousel"></div>
 </div>
 
+<script>
+  const videoItems = [
+    {
+      src: "static/videos/pig_rccar_combine.mp4",
+      text: 'A rccar with a <span class="blue-text"><del>chicken</del> pig head</span>.'
+    },
+    {
+      src: "static/videos/pig_rccar_hat_combine.mp4",
+      text: 'A rccar with a <span class="blue-text"><del>chicken</del> pig head wearing a hat</span>.'
+    },
+    {
+      src: "static/videos/girl_red_dress_combine.mp4",
+      text: 'A little girl wearing a <span class="blue-text">red dress</span>.'
+    },
+    {
+      src: "static/videos/girl_goggles_combine.mp4",
+      text: 'A little girl wearing <span class="blue-text">goggles</span>.'
+    },
+    {
+      src: "static/videos/girl_blue_shoes_combine.mp4",
+      text: 'A little girl wearing a pair of <span class="blue-text">blue shoes</span>.'
+    },
+    {
+      src: "static/videos/hammer_like_tail_combine.mp4",
+      text: 'A toy with a <span class="blue-text">hammer like tail</span>.'
+    },
+    {
+      src: "static/videos/box_rabbit_ears_combine.mp4",
+      text: 'A toy with <span class="blue-text">rabbit like ears</span>.'
+    },
+    {
+      src: "static/videos/head_pepper_mustache_combine.mp4",
+      text: 'A head with <span class="blue-text">pepper like mustache</span>.'
+    },
+    {
+      src: "static/videos/head_cowboy_hat_combine.mp4",
+      text: 'A head wearing a <span class="blue-text">cowboy hat</span>.'
+    },
+    {
+      src: "static/videos/mechine_barrel_combine.mp4",
+      text: 'A mechine holds a <span class="blue-text"><del>cup</del> barrel</span>.'
+    },
+    {
+      src: "static/videos/knight_mask_combine.mp4",
+      text: 'A knight wearing a <span class="blue-text">mask</span>.'
+    },
+    {
+      src: "static/videos/knight_shield_combine.mp4",
+      text: 'A knight holds a <span class="blue-text">colorful shield</span>.'
+    }
+  ];
+
+  const topLabels = ['source object', 'ours', 'LGM'];
+  const bottomLabels = ['tailor3d', 'MVEdit', '3DAdapter'];
+
+  const container = document.getElementById("results-carousel");
+
+  videoItems.forEach(item => {
+    const html = `
+      <div class="video-item">
+        <div class="video-text-four">
+          ${topLabels.map(text => `<div class="video-text-four-item">${text}</div>`).join("")}
+        </div>
+        <video src="${item.src}" loop autoplay muted preload="auto" class="no-controls"></video>
+        <div class="video-text">${item.text}</div>
+        <div class="video-text-four-buttom">
+          ${bottomLabels.map(text => `<div class="video-text-four-item">${text}</div>`).join("")}
+        </div>
+      </div>
+    `;
+    container.innerHTML += html;
+  });
+</script>
+
 <!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
-<!--End paper poster -->
-
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
